@@ -8,21 +8,24 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+<!--            <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+            <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Preise und Leistungen</a>
+<!--            <a class="nav-link" href="#">Preise und Leistungen</a>-->
+            <router-link class="nav-link" to="/preise-und-leistungen">Preise und Leistungen</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Termin buchen</a>
+<!--            <a class="nav-link" href="#">Termin buchen</a>-->
+            <router-link class="nav-link" to="/termin-buchen">Termin buchen</router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Infos
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Über mich</a></li>
-              <li><a class="dropdown-item" href="#">Impressum und Anfahrt</a></li>
+              <li><router-link class="nav-link" to="/about">Über mich</router-link></li>
+              <li><router-link class="nav-link" to="/impressum">Impressum und Anfahrt</router-link></li>
             </ul>
           </li>
         </ul>
