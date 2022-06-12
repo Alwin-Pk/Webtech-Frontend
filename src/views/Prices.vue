@@ -1,11 +1,12 @@
 <template>
-<h1>Preise und Leistungen</h1>
+  <h1>Preise und Leistungen</h1>
 </template>
 
 <script>
 export default {
-  name: 'Prices',
-};
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: 'Prices'
+}
 </script>
 
 <style scoped>
