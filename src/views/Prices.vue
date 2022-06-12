@@ -1,11 +1,11 @@
 <template>
-<h1>Preise und Leistungen</h1>
+  <h1>Preise und Leistungen</h1>
 </template>
 
 <script>
 export default {
-  name: 'Prices',
-};
+  name: 'Prices'
+}
 </script>
 
 <style scoped>

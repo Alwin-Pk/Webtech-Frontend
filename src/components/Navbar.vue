@@ -1,22 +1,21 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Kosmetiksalon Passion</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-<!--            <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+            <!--            <a class="nav-link active" aria-current="page" href="#">Home</a>-->
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
-<!--            <a class="nav-link" href="#">Preise und Leistungen</a>-->
+            <!--            <a class="nav-link" href="#">Preise und Leistungen</a>-->
             <router-link class="nav-link" to="/preise-und-leistungen">Preise und Leistungen</router-link>
           </li>
           <li class="nav-item">
-<!--            <a class="nav-link" href="#">Termin buchen</a>-->
+            <!--            <a class="nav-link" href="#">Termin buchen</a>-->
             <router-link class="nav-link" to="/termin-buchen">Termin buchen</router-link>
           </li>
           <li class="nav-item dropdown">
@@ -36,8 +35,9 @@
 
 <script>
 export default {
-  name: 'Navbar',
-};
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: 'Navbar'
+}
 </script>
 
 <style scoped>
