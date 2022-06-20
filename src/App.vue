@@ -8,6 +8,8 @@
 
       <navbar></navbar>
 
+      <card> </card>
+
       <router-view/>
     </div>
     <h1></h1>
