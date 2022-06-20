@@ -8,13 +8,10 @@
 
       <navbar></navbar>
 
-      <card> </card>
-
-      <termin></termin>
       <router-view/>
     </div>
-  </div>
-  <h1></h1>
+    <h1></h1>
+
 
   <hr style="height:2px;border-width:0;color:gray;background-color:black;">
 
@@ -27,17 +24,14 @@
 <script>
 import Navbar from './components/Navbar.vue'
 import Carousel from '@/components/carousel'
-import card from '@/components/card'
-import Termin from '@/views/Termin'
+import Card from "@/components/Card";
 
 export default {
   name: 'App',
   components: {
     Carousel,
     Navbar,
-    // eslint-disable-next-line vue/no-unused-components
-    card,
-    Termin
+    Card
   }
 }
 </script>
