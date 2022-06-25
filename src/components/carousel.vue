@@ -3,15 +3,15 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="https://as1.ftcdn.net/v2/jpg/02/29/86/06/1000_F_229860680_Fc2ZMSYenrMppckqE3uX2ZreE5Pj8KcE.jpg"
-             class="d-block w-100" width="-10" height="360">
+             class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
       </div>
       <div class="carousel-item">
         <img src="https://as2.ftcdn.net/v2/jpg/03/36/20/63/1000_F_336206326_Z6UdwfWxLz1eLzFKiBpEhIGCH5wjJK8i.jpg"
-             class="d-block w-100" width="-10" height="360">
+             class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
       </div>
       <div class="carousel-item">
         <img src="https://as2.ftcdn.net/v2/jpg/02/92/08/71/1000_F_292087132_IkTLYBLNJijBU0azHmO5WgMkfKct8C2G.jpg"
-             class="d-block w-100" width="-10" height="360">
+             class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
