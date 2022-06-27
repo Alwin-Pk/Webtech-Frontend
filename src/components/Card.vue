@@ -1,65 +1,72 @@
 <template>
-  <div class="container">
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://www.float-stuttgart.de/public/uploads/plugins/webshop/productsimages/1157/deluxe-rueckenmassage_0_1511091256.jpg"
-        class="card-img-top" alt="...">
-      <div class="card-body">
-        <div class="col" v-for="guest in guests" :key="guest.id">
-          <h5 class="card-title">{{ guest.firstName }} {{ guest.lastName }}</h5>
-        </div>
-        <p class="card-text">60 Verwöhnungsminuten zum Ausschalten vom Alltagsstress.</p>
-
-        <form class="text-start needs-validation" id="guests-create-form" novalidate>
-        <div class="m-4">
-          <div class="row g-2">
-            <div class="col-12">
-
-                <label for="firstName" class="form-label">Vorname</label>
-                <input type="text" class="form-control" id="firstName" v-model="firstName" required>
-
-              <label for="lastName" class="form-label">Nachname</label>
-              <input type="text" class="form-control" id="lastName" v-model="astName" required>
+  <body>
+    <div class="container">
+      <div class="card" style="width: 18rem;">
+        <img
+          src="https://www.float-stuttgart.de/public/uploads/plugins/webshop/productsimages/1157/deluxe-rueckenmassage_0_1511091256.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <div class="col" v-for="guest in guests" :key="guest.id">
+            <h5 class="card-title"><b>Shellack Pediküre</b></h5>
+          </div>
+          <p class="card-text">Fußbad, Hornhautentfernung, Nagelhautentfernung, Nägel kürzen und feilen, Shellack auftragen.</p>
+          <b>Angebotspreis: 45€</b>
+          <p></p>
+          <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Jetzt buchen!
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+          <form class="text-start needs-validation" id="guests-create-form" novalidate>
+          <div class="m-4">
+            <div class="row g-2">
+              <div class="col-12">
+                  <label for="firstName" class="form-label">Vorname</label>
+                  <input type="text" class="form-control" id="firstName" v-model="firstName" required>
+                <label for="lastName" class="form-label">Nachname</label>
+                <input type="text" class="form-control" id="lastName" v-model="lastName" required>
+                </div>
+              <div class="input-group">
+                <label for="emailAdresse" class="form-label">E-Mail</label>
+                <input type="text" class="form-control" id="emailAdresse" v-model="emailAdresse" required>
               </div>
-            <!--            <div class="col-6">-->
+            </div>
             <div class="input-group">
-              <!--                <span class="input-group-text">E-Mail</span>-->
-              <label for="emailAdresse" class="form-label">E-Mail</label>
-              <input type="text" class="form-control" id="emailAdresse" v-model="emailAdresse" required>
+              <label for="telefonNummer" class="form-label">Telefonnummer</label>
+              <input type="text" class="form-control" id="telefonNummer" v-model="telefonNummer" required>
+            </div>
+            <div class="input-group">
+              <label for="date" class="form-label">Datum</label>
+              <input type="text" class="form-control" id="date" v-model="date" required>
+            </div>
+            <div v-if="this.serverValidationMessages">
+              <ul>
+                <li v-for="(message, index) in serverValidationMessages" :key="index" style="color: red">
+                  {{ message }}
+                </li>
+              </ul>
+            </div>
+            <button class="btn btn-primary me-3" type="submit" @click.prevent="createGuests">Jetzt buchen</button>
+          </div>
+          </form>
             </div>
           </div>
-          <!--            <div class="col-6">-->
-          <div class="input-group">
-            <label for="telefonNummer" class="form-label">Telefonnummer</label>
-            <input type="text" class="form-control" id="telefonNummer" v-model="telefonNummer" required>
-            <!--              </div>-->
-          </div>
-          <div class="input-group">
-            <label for="date" class="form-label">Datum</label>
-            <input type="text" class="form-control" id="date" v-model="date" required>
-          </div>
-
-          <div v-if="this.serverValidationMessages">
-            <ul>
-              <li v-for="(message, index) in serverValidationMessages" :key="index" style="color: red">
-                {{ message }}
-              </li>
-            </ul>
-          </div>
-
-          <!--        <button type="button" class="btn btn-secondary">Jetzt buchen</button> -->
-          <button class="btn btn-primary me-3" type="submit" @click.prevent="createGuests">Jetzt buchen</button>
         </div>
-        </form>
       </div>
     </div>
-  </div>
+  </body>
 </template>
 
 <script>
-export default {
 
+export default {
+  // eslint-disable no-unused-vars
+  // eslint-disable-next-line vue/no-unused-components
+  // eslint-disable no-undef
   // eslint-disable-next-line vue/multi-word-component-names
+  /* eslint-disable */
   name: 'card',
   data () {
     return {
@@ -74,6 +81,17 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    const externalScript = document.createElement('script')
+    externalScript.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/webui-popover/1.2.18/jquery.webui-popover.min.js')
+    document.head.appendChild(externalScript)
+    const externalScript2 = document.createElement('script')
+    externalScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js')
+    document.head.appendChild(externalScript)
+    const collapseElementList = document.querySelectorAll('.collapse')
+    const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
+
   },
   emits: ['created'],
   methods: {
@@ -100,19 +118,6 @@ export default {
         await this.handleResponse(response)
       }
     },
-    // async handleResponse (response) {
-    //   if (response.ok) {
-    //     this.$emit('created', response.headers.get('location'))
-    //     document.getElementById('close-offcanvas').click()
-    //   } else if (response.status === 400) {
-    //     response = await response.json()
-    //     response.errors.forEach(error => {
-    //       this.serverValidationMessages.push(error.defaultMessage)
-    //     })
-    //   } else {
-    //     this.serverValidationMessages.push('Unknown error occurred')
-    //   }
-    // },
     validate () {
       const form = document.getElementById('guests-create-form')
       form.classList.add('was-validated')
@@ -120,22 +125,6 @@ export default {
     }
   }
 }
-
-// mounted () {
-//   const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/guests'
-//   const requestOptions = {
-//     method: 'GET',
-//     redirect: 'follow'
-//   }
-//
-//   fetch(endpoint, requestOptions)
-//     .then(response => response.json())
-//     .then(result => result.forEach(guest => {
-//       this.guests.push(guest)
-//     }))
-//     .catch(error => console.log('error', error))
-// }
-// }
 
 </script>
 

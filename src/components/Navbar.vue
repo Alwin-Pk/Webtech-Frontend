@@ -8,15 +8,12 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <!--            <a class="nav-link active" aria-current="page" href="#">Home</a>-->
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
-            <!--            <a class="nav-link" href="#">Preise und Leistungen</a>-->
             <router-link class="nav-link" to="/Prices">Preise und Leistungen</router-link>
           </li>
           <li class="nav-item">
-            <!--            <a class="nav-link" href="#">Termin buchen</a>-->
             <router-link class="nav-link" to="/Termin">Termin buchen</router-link>
           </li>
           <li class="nav-item dropdown">
