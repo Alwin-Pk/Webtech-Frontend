@@ -16,6 +16,9 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/Termin">Termin buchen</router-link>
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/about">Kontakt</router-link>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                data-bs-toggle="dropdown" aria-expanded="false">
