@@ -6,7 +6,7 @@
       <div class="col">
         <card angebot="Mandelsäure Peeling" beschreibung="Gegen unreine Haut, Akne, großporige Haut, Pigmentverfärbungen,
         Falten, Straffheitsverlust"
-              preis="80€"/>
+              preis="80€" imgsource="https://www.float-stuttgart.de/public/uploads/plugins/webshop/productsimages/1157/deluxe-rueckenmassage_0_1511091256.jpg"/>
       </div>
       <div class="col">
         <card angebot="Shellack Pediküre" beschreibung="Fußbad, Hornhautentfernung, Nagelhautentfernung,

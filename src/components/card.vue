@@ -3,7 +3,7 @@
     <div class="container">
       <div class="card" style="width: 18rem;">
         <img
-          src=" {{imgsource }}"
+          :src="imgsource"
           class="card-img-top" alt="Image not available">
 <!--        https://www.float-stuttgart.de/public/uploads/plugins/webshop/productsimages/1157/deluxe-rueckenmassage_0_1511091256.jpg-->
         <div class="card-body">
