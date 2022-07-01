@@ -1,40 +1,43 @@
 <template>
   <div class="home">
-    <h1> Angebote des Monats </h1>
-  <div class="container" style="padding-bottom: 100px">
-    <div class="row row-cols-3" style="padding-left: 45px">
-      <div class="col">
-        <card angebot="Mandelsäure Peeling" beschreibung="Gegen unreine Haut, Akne, großporige Haut, Pigmentverfärbungen,
-        Falten, Straffheitsverlust"
-              preis="80€" imgsource="https://www.float-stuttgart.de/public/uploads/plugins/webshop/productsimages/1157/deluxe-rueckenmassage_0_1511091256.jpg"/>
+    <hr>
+    <h1> Angebote des Monats</h1>
+    <h2> Jeden Monat sparen - Drei Behandlungen zum vergünstigten Preis</h2>
+    <hr>
+    <div class="container" style="padding-bottom: 100px; padding-top: 50px">
+      <div class="row row-cols-3" style="padding-left: 45px">
+        <div class="col">
+          <card angebot="Ganzkörpermassage" beschreibung="Erholen Sie sich vom Alltagsstress. 60 Minuten Ganzkörpermassage für Ihr Wohlbefinden"
+                preis="65€" imgsource="https://www.float-stuttgart.de/public/uploads/plugins/webshop/productsimages/1157/deluxe-rueckenmassage_0_1511091256.jpg"
+          card_id="card_1" old-price="75€"/>
+        </div>
+        <div class="col">
+          <card card_id="card_2" angebot="Shellack Pediküre" beschreibung="Fußbad, Hornhautentfernung, Nagelhautentfernung,
+        Nägel kürzen und feilen, Shellack auftragen." old-price="55€"
+        preis="45€" imgsource="https://kosmetik-driller.de/wp-content/uploads/elementor/thumbs/OBF1800-odwwnk8lwat2dpyf4o0shlo07w0o8xhy9c575r8lxc.jpg"/>
+        </div>
+        <div class="col">
+          <card card_id="card_3" angebot="Maniküre" beschreibung="Nagelbad, Hornhautentfernung, Nagelhautentfernung,
+        Nägel kürzen und feilen, Nagellack auftragen." old-price="45€"
+              preis="35€" imgsource="https://www.kosmetik-koje-carolinensiel.de/images/manikuere.jpg"/>
+        </div>
       </div>
-      <div class="col">
-        <card angebot="Shellack Pediküre" beschreibung="Fußbad, Hornhautentfernung, Nagelhautentfernung,
-      Nägel kürzen und feilen, Shellack auftragen."
-      preis="45€"/>
-      </div>
-      <div class="col">
-        <card angebot="Maniküre" beschreibung="Nagelbad, Hornhautentfernung, Nagelhautentfernung,
-      Nägel kürzen und feilen, Nagellack auftragen."
-            preis="35€"/>
-      </div>
-    </div>
-      <p style="padding: 20px"></p>
-    <div class="row row-cols-3">
-      <div class="col"></div>
-      <div class="col">
-        <div class="card-body" style="padding-left: 0px">
-          <h5 class="card-title">Weitere Angebote finden sie auf der Treatwell Plattform</h5>
-          <p></p>
-          <a target="_blank" rel="noopener noreferrer" href="https://buchung.treatwell.de/ort/passion-kosmetik-salon/" class="btn btn-primary">Zu den Angeboten</a>
+        <p style="padding: 20px"></p>
+      <div class="row row-cols-3">
+        <div class="col"></div>
+        <div class="col">
+          <div class="card-body" style="padding-left: 0px">
+            <h5 class="card-title">Weitere Angebote finden sie auf der Treatwell Plattform</h5>
+            <p></p>
+            <a target="_blank" rel="noopener noreferrer" href="https://buchung.treatwell.de/ort/passion-kosmetik-salon/" class="btn btn-primary">Zu den Angeboten</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-    <h2>Folgende Personen haben bereits bei uns Termine gebucht:</h2>
+    <h2>Zuletzt gebucht:</h2>
     <p style="padding-bottom: 30px"/>
     <div class="col" v-for="guest in guests" :key="guest.id">
-    <p>{{ guest.firstName }} {{guest.lastName }}</p>
+    <p>{{ guest.firstName }} hat eine  {{guest.lastName }}</p>
     </div>
   </div>
 </template>
@@ -82,6 +85,13 @@ export default {
 h1
 {
   font-family: "Avenir Next";
+  text-align: center;
+  padding-top: 35px;
+}
+
+h2 {
+  padding-bottom: 30px;
+  color: #e77a8c;
 }
 
 </style>

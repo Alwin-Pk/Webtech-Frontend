@@ -27,26 +27,15 @@
             Bitte geben Sie Ihre Telefonnummer ein.
           </div>
           <p></p>
-          <label for="date" class="form-label">Datum</label>
-          <input type="text" class="form-control" id="date" v-model="date" required>
+          <label for="date" class="form-label">Gewünschter Termin</label>
+          <input type="datetime-local" class="form-control" id="date" v-model="date" required
+                 name="date"
+                 min="2018-06-07T00:00" max="2018-06-14T00:00">
           <div class="invalid-feedback">
             Bitte geben Sie Ihr gewünschtes Datum ein.
           </div>
         </div>
         <p></p>
-        <div class="input-group">
-        </div>
-      </div>
-      <div class="input-group">
-      </div>
-      <div class="input-group">
-      </div>
-      <div v-if="this.serverValidationMessages">
-        <ul>
-          <li v-for="(message, index) in serverValidationMessages" :key="index" style="color: red">
-            {{ message }}
-          </li>
-        </ul>
       </div>
       <button class="btn btn-primary me-3" type="submit" @click="guestFormEntry" style="font-size: 13px">Anfrage abschicken</button>
     </div>

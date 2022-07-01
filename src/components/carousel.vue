@@ -1,16 +1,16 @@
 <template class="carousel">
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://as1.ftcdn.net/v2/jpg/02/29/86/06/1000_F_229860680_Fc2ZMSYenrMppckqE3uX2ZreE5Pj8KcE.jpg"
+      <div class="carousel-item active img-fluid">
+        <img src="https://kosmetiksalon-passion.de/wp-content/uploads/2018/10/slider-passion-titel-1700x400.jpg"
              class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
       </div>
       <div class="carousel-item">
-        <img src="https://as2.ftcdn.net/v2/jpg/03/36/20/63/1000_F_336206326_Z6UdwfWxLz1eLzFKiBpEhIGCH5wjJK8i.jpg"
+        <img src="https://kosmetiksalon-passion.de/wp-content/uploads/2018/10/slider-passion-titel-1700x400.jpg"
              class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
       </div>
       <div class="carousel-item">
-        <img src="https://as2.ftcdn.net/v2/jpg/02/92/08/71/1000_F_292087132_IkTLYBLNJijBU0azHmO5WgMkfKct8C2G.jpg"
+        <img src="https://kosmetiksalon-passion.de/wp-content/uploads/2018/10/slider-passion-titel-1700x400.jpg"
              class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
       </div>
     </div>
@@ -30,6 +30,7 @@ export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'carousel'
 }
+
 </script>
 
 <style scoped>

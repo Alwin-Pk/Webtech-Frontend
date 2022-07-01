@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg bg-custom-2">
+    <div class="container-fluid" >
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -16,20 +16,17 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/Termin">Termin buchen</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/about">Kontakt</router-link>
-          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
                data-bs-toggle="dropdown" aria-expanded="false">
               Infos
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <router-link class="nav-link" to="/about">Über mich</router-link>
+                <router-link class="nav-link" to="/AboutMe">Über mich</router-link>
               </li>
               <li>
-                <router-link class="nav-link" to="/impressum">Impressum und Anfahrt</router-link>
+                <router-link class="nav-link" to="/contact">Kontakt</router-link>
               </li>
             </ul>
           </li>
@@ -47,5 +44,13 @@ export default {
 </script>
 
 <style scoped>
+
+.bg-custom-2 {
+  background-image: linear-gradient(15deg, #ffffff 30%, #d75a6e 95%);
+}
+
+.nav-item {
+  color: black;
+}
 
 </style>

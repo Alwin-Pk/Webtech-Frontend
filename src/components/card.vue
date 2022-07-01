@@ -5,18 +5,18 @@
         <img
           :src="imgsource"
           class="card-img-top" alt="Image not available">
-<!--        https://www.float-stuttgart.de/public/uploads/plugins/webshop/productsimages/1157/deluxe-rueckenmassage_0_1511091256.jpg-->
         <div class="card-body">
             <h5 class="card-title"><b>{{ angebot }}</b></h5>
           <p class="card-text"> {{ beschreibung }}</p>
           <b>Angebotspreis: {{ preis }}</b>
+          <p class="instead"><b>(anstatt {{ oldPrice }})</b></p>
           <p></p>
           <p>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" :data-bs-target="`#${card_id}`" aria-expanded="false" :aria-controls="card_id">
               Jetzt buchen!
             </button>
           </p>
-          <div class="collapse" id="collapseExample">
+          <div class="collapse" :id="card_id">
             <div class="card card-body">
               <GuestForm></GuestForm>
             </div>
@@ -39,17 +39,7 @@ export default {
 /* eslint-disable */
   name: 'card',
   components: {GuestForm},
-  props: ['angebot', 'beschreibung', 'preis', 'imgsource'],
-  mounted () {
-    // const externalScript = document.createElement('script')
-    // externalScript.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/webui-popover/1.2.18/jquery.webui-popover.min.js')
-    // document.head.appendChild(externalScript)
-    // const externalScript2 = document.createElement('script')
-    // externalScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js')
-    // document.head.appendChild(externalScript)
-    // const collapseElementList = document.querySelectorAll('.collapse')
-    // const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
-  },
+  props: ['angebot', 'beschreibung', 'preis', 'imgsource', 'card_id', 'oldPrice'],
   emits: ['created'],
   methods: {
     async createGuests () {
@@ -86,5 +76,10 @@ export default {
 </script>
 
 <style scoped>
+
+.instead {
+  color: red;
+  font-size: 15px;
+}
 
 </style>

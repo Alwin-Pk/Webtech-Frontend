@@ -1,9 +1,24 @@
 <template>
     <div class="header">
-      <h1 class="globalHeader">Kosmetiksalon Passion</h1></div>
+      <h1 class="globalHeader"><span class="stretch">PASSION</span><br><p class="kos">KOSMETIKSALON</p></h1>
+    </div>
       <carousel></carousel>
       <navbar></navbar>
-  <router-view/>
+    <router-view/>
+  <footer class="globalFooter">
+    <div class="row">
+      <div class="footer-3">
+        Kosmetiksalon Passion <br>
+        Inh. Magdalena Pekala <br>
+        Kantstraße 93 - 10627 Berlin-Charlottenburg
+        <div class="footer-angebot" style="text-align: center">
+          <h5 class="footer-angebot-title">Weitere Angebote finden Sie auf Treatwell</h5>
+          <p></p>
+          <a target="_blank" rel="noopener noreferrer" href="https://buchung.treatwell.de/ort/passion-kosmetik-salon/" class="btn btn-primary">Zu den Angeboten</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -11,6 +26,7 @@ import Navbar from './components/Navbar.vue'
 import card from '@/components/card'
 import carousel from '@/components/carousel'
 import Prices from '@/views/Prices'
+import footer from '@/components/footer'
 
 export default {
   name: 'App',
@@ -22,33 +38,72 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     card,
     // eslint-disable-next-line vue/no-unused-components
-    Prices
+    Prices,
+    // eslint-disable-next-line vue/no-unused-components
+    footer
   }
 }
 </script>
 
 <style>
 
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
+/*Banner image*/
 div.header {
-  background-image: url("https://img.freepik.com/free-vector/cherry-blossom-branch-with-sakura-flower-watercolor-cherry-blossom-vector-pink-sakura-flower-background-sakura-white-background-watercolor-cherry-bud-cherry-blossom-flower-blooming-vector_538213-232.jpg?w=1060");
-  background-position: center;
-  /*opacity: 0.5;*/
-  /*https://wallpapercave.com/wp/wp7160349.png*/
+  background-image: url("/src/assets/head-banner.png")
 }
 
-h1{
-  font-family: "Brush Script MT";
+.globalHeader{
+  font-family: "Avenir Next";
   padding: 60px;
   text-align: center;
   color: black;
-  font-size: 50px;
+  font-size: 38px;
+}
+
+.globalFooter {
+  background-color: black;
+  color: white;
+  font-family: "Avenir Next";
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/*Footer address*/
+.footer-3 {
+  text-align: right;
+}
+
+/*Header PASSION*/
+span.stretch {
+  display:inline-block;
+  font-family: "Times New Roman OS Regular";
+  -webkit-transform:scale(2,1); /* Safari and Chrome */
+  -moz-transform:scale(2,1); /* Firefox */
+  -ms-transform:scale(2,1); /* IE 9 */
+  -o-transform:scale(2,1); /* Opera */
+  transform:scale(3,2); /* W3C */
+}
+
+/*Header KOSMETIKSALON*/
+.kos {
+  padding-top: 3px;
+  -webkit-transform:scale(1.45,1); /* Safari and Chrome */
+  -moz-transform:scale(1.45,1); /* Firefox */
+  -ms-transform:scale(1.45,1); /* IE 9 */
+  -o-transform:scale(1.45,1); /* Opera */
+  transform:scale(1.45,1); /* W3C */
+  color: #e77a8c;
+}
+
+/*Navbar font padding*/
+nav {
+  padding: 30px;
+  font-weight: bold;
+}
+
+/*Navbar color of active tab*/
+nav a.router-link-exact-active {
+  color: #efa0b0;
 }
 
 #app {
@@ -56,20 +111,6 @@ h1{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
 }
 
 </style>
