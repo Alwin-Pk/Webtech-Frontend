@@ -83,7 +83,7 @@ export default {
 <style scoped>
 
 h1.pageHeader {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   text-align: center;
   padding-top: 50px;
 }
