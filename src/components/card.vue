@@ -1,11 +1,11 @@
 <template>
   <body>
     <div class="container">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 18rem;height: auto">
         <img
           :src="imgsource"
           class="card-img-top" alt="Image not available">
-        <div class="card-body">
+        <div class="card-body" style="background-image: linear-gradient(180deg, #ffffff 40%, rgb(231,122,140,0.4) 100%)">
             <h5 class="card-title"><b>{{ angebot }}</b></h5>
           <p class="card-text"> {{ beschreibung }}</p>
           <b>Angebotspreis: {{ preis }}</b>
@@ -18,7 +18,7 @@
           </p>
           <div class="collapse" :id="card_id">
             <div class="card card-body">
-              <GuestForm></GuestForm>
+              <guest-form></guest-form>
             </div>
           </div>
         </div>
@@ -36,41 +36,10 @@ export default {
 // eslint-disable-next-line vue/no-unused-components
 // eslint-disable no-undef
 // eslint-disable-next-line vue/multi-word-component-names
-/* eslint-disable */
+  /* eslint-disable */
   name: 'card',
   components: {GuestForm},
-  props: ['angebot', 'beschreibung', 'preis', 'imgsource', 'card_id', 'oldPrice'],
-  emits: ['created'],
-  methods: {
-    async createGuests () {
-      if (this.validate()) {
-        const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/guests'
-        const headers = new Headers()
-        headers.append('Content-Type', 'application/json')
-        const guests = JSON.stringify({
-          firstName: this.firstName,
-          lastName: this.lastName,
-          emailAdresse: this.emailAdresse,
-          telefonNummer: this.telefonNummer,
-          date: this.date
-        })
-
-        const requestOptions = {
-          method: 'POST',
-          headers: headers,
-          body: guests,
-          redirect: 'follow'
-        }
-        const response = await fetch(endpoint, requestOptions)
-        await this.handleResponse(response)
-      }
-    },
-    validate () {
-      const form = document.getElementById('guests-create-form')
-      form.classList.add('was-validated')
-      return form.checkValidity()
-    }
-  }
+  props: ['angebot', 'beschreibung', 'preis', 'imgsource', 'card_id', 'oldPrice']
 }
 
 </script>
@@ -80,6 +49,21 @@ export default {
 .instead {
   color: red;
   font-size: 15px;
+}
+
+.btn-primary {
+  background-color: black;
+  border-color: black;
+}
+
+.btn-primary:hover {
+  background-color: #d06072;
+  border-color: #d06072;
+}
+
+.btn-primary:focus {
+  background-color: #efa0b0;
+  border-color: #efa0b0;
 }
 
 </style>

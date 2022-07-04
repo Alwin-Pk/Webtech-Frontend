@@ -14,7 +14,7 @@
             <router-link class="nav-link" to="/Prices">Preise und Leistungen</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/Termin">Termin buchen</router-link>
+            <router-link class="nav-link" to="/Termin">Terminkalender</router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
@@ -47,10 +47,6 @@ export default {
 
 .bg-custom-2 {
   background-image: linear-gradient(15deg, #ffffff 30%, #d75a6e 95%);
-}
-
-.nav-item {
-  color: black;
 }
 
 </style>

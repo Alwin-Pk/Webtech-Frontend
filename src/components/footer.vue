@@ -1,5 +1,5 @@
 <template>
-  <h1>g1</h1>
+  <p>Footer not working here</p>
 </template>
 
 <script>

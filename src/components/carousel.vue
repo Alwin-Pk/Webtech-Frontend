@@ -2,15 +2,19 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active img-fluid">
-        <img src="https://kosmetiksalon-passion.de/wp-content/uploads/2018/10/slider-passion-titel-1700x400.jpg"
+        <img src="../assets/slider-passion-1.jpg"
              class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
       </div>
       <div class="carousel-item">
-        <img src="https://kosmetiksalon-passion.de/wp-content/uploads/2018/10/slider-passion-titel-1700x400.jpg"
+        <img src="../assets/slider-passion-3.jpg"
              class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
       </div>
       <div class="carousel-item">
-        <img src="https://kosmetiksalon-passion.de/wp-content/uploads/2018/10/slider-passion-titel-1700x400.jpg"
+        <img src="../assets/slider-passion-2.jpg"
+             class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/biocos.jpg"
              class="d-block w-100" width="-10" height="360" alt="Kosmetikbild">
       </div>
     </div>

@@ -29,15 +29,14 @@
           <p></p>
           <label for="date" class="form-label">Gewünschter Termin</label>
           <input type="datetime-local" class="form-control" id="date" v-model="date" required
-                 name="date"
-                 min="2018-06-07T00:00" max="2018-06-14T00:00">
+                 min="2022-01-01T00:00" max="2022-12-31T23:59" style="font-size: 95%;width: 102%">
           <div class="invalid-feedback">
             Bitte geben Sie Ihr gewünschtes Datum ein.
           </div>
         </div>
         <p></p>
       </div>
-      <button class="btn btn-primary me-3" type="submit" @click="guestFormEntry" style="font-size: 13px">Anfrage abschicken</button>
+      <button class="btn btn-primary me-3" type="submit" @click.prevent="guestFormEntry" style="font-size: 13px">Anfrage abschicken</button>
     </div>
   </form>
 </template>
@@ -58,7 +57,7 @@ export default {
     guestFormEntry () {
       const valid = this.validate()
       if (valid) {
-        const endUrl = process.env.VUE_APP_BACKEND_BASE_URL + 'api/v1/guests/'
+        const endUrl = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/guests/'
         const headers = new Headers()
         headers.append('Content-Type', 'application/json')
 
@@ -82,30 +81,42 @@ export default {
       }
     },
     validate () {
-      (() => {
-        'use strict'
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+      let valid = true
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            valid = false
+            event.preventDefault()
+            event.stopPropagation()
+          }
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll('.needs-validation')
-        let valid = true
-        // Loop over them and prevent submission
-        Array.from(forms).forEach(form => {
-          form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-              valid = false
-              event.preventDefault()
-              event.stopPropagation()
-            }
-
-            form.classList.add('was-validated')
-          }, false)
-        })
-      })()
+          form.classList.add('was-validated')
+        }, false)
+      })
+      return valid
     }
   }
 }
 </script>
 
 <style scoped>
+
+.btn-primary {
+  background-color: black;
+  border-color: black;
+}
+
+.btn-primary:hover {
+  background-color: #d06072;
+  border-color: #d06072;
+}
+
+.btn-primary:focus {
+  background-color: #efa0b0;
+  border-color: #efa0b0;
+}
 
 </style>

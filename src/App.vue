@@ -7,15 +7,19 @@
     <router-view/>
   <footer class="globalFooter">
     <div class="row">
-      <div class="footer-3">
-        Kosmetiksalon Passion <br>
-        Inh. Magdalena Pekala <br>
-        Kantstraße 93 - 10627 Berlin-Charlottenburg
-        <div class="footer-angebot" style="text-align: center">
-          <h5 class="footer-angebot-title">Weitere Angebote finden Sie auf Treatwell</h5>
-          <p></p>
-          <a target="_blank" rel="noopener noreferrer" href="https://buchung.treatwell.de/ort/passion-kosmetik-salon/" class="btn btn-primary">Zu den Angeboten</a>
+      <div class="footer-content">
+        <div class="footer-times">
+          <h5 class="footer-times-title">Öffnungszeiten:</h5>
+          Di. - Fr. 10:00 - 19:00 Uhr <br>
+          Samstag: 10:00 - 14:00 Uhr
         </div>
+        <div class="kospassion">
+          <b>Kosmetik Salon Passion</b> <br>
+          Inh. Magdalena Pekala <br>
+        </div>
+        <a class="address" target="_blank" href="https://www.google.de/maps/place/Kosmetik+Salon+Passion/@52.506637,13.2964346,17z/data=!3m1!4b1!4m5!3m4!1s0x47a850d956bf7d61:0x47330eef31cdb558!8m2!3d52.5066181!4d13.2986228">
+        Kantstraße 93 - 10627 Berlin-Charlottenburg
+        </a>
       </div>
     </div>
   </footer>
@@ -49,7 +53,11 @@ export default {
 
 /*Banner image*/
 div.header {
-  background-image: url("/src/assets/head-banner.png")
+  background-repeat: no-repeat;
+  aspect-ratio: auto;
+  background-size: cover;
+  background-image: url("/src/assets/head-banner.png");
+  margin-bottom: -8px;
 }
 
 .globalHeader{
@@ -64,34 +72,77 @@ div.header {
   background-color: black;
   color: white;
   font-family: "Avenir Next";
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 20px;
 }
 
-/*Footer address*/
-.footer-3 {
+.footer-content {
   text-align: right;
+  margin: auto;
+
+}
+
+.footer-times-title {
+  font-size: 23px;
+  margin-bottom: 3px;
+}
+
+.footer-times {
+  margin: auto;
+  float: left;
+  text-align: left;
+}
+
+.kospassion {
+  font-size: 110%;
+}
+
+.address {
+  font-size: 110%;
+}
+
+.address:link {
+  color: white;
+  text-decoration: none;
+}
+
+.address:hover {
+  color: #e77a8c;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.address:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.address:visited:hover {
+  color: #e77a8c;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 /*Header PASSION*/
 span.stretch {
   display:inline-block;
   font-family: "Times New Roman OS Regular";
-  -webkit-transform:scale(2,1); /* Safari and Chrome */
-  -moz-transform:scale(2,1); /* Firefox */
-  -ms-transform:scale(2,1); /* IE 9 */
-  -o-transform:scale(2,1); /* Opera */
-  transform:scale(3,2); /* W3C */
+  -webkit-transform:scale(2.5,1.5); /* Safari and Chrome */
+  -moz-transform:scale(2.5,1.5); /* Firefox */
+  -ms-transform:scale(2.5,1.5); /* IE 9 */
+  -o-transform:scale(2.5,1.5); /* Opera */
+  transform:scale(2.5,1.5); /* W3C */
 }
 
 /*Header KOSMETIKSALON*/
 .kos {
-  padding-top: 3px;
-  -webkit-transform:scale(1.45,1); /* Safari and Chrome */
-  -moz-transform:scale(1.45,1); /* Firefox */
-  -ms-transform:scale(1.45,1); /* IE 9 */
-  -o-transform:scale(1.45,1); /* Opera */
-  transform:scale(1.45,1); /* W3C */
+  padding: 0;
+  margin: 0;
+  -webkit-transform:scale(1.20,1.10); /* Safari and Chrome */
+  -moz-transform:scale(1.20,1.10); /* Firefox */
+  -ms-transform:scale(1.20,1.10); /* IE 9 */
+  -o-transform:scale(1.20,1.10); /* Opera */
+  transform:scale(1.20,1.10); /* W3C */
   color: #e77a8c;
 }
 
@@ -102,8 +153,24 @@ nav {
 }
 
 /*Navbar color of active tab*/
-nav a.router-link-exact-active {
+nav a.router-link-active {
+  color: #d06072;
+}
+
+.navbar a:hover{
   color: #efa0b0;
+}
+
+.navbar a:active {
+  color: #d06072;
+}
+
+.navbar a:focus {
+  color: #d06072;
+}
+
+.navbar a {
+  color: #000000;
 }
 
 #app {
@@ -111,6 +178,7 @@ nav a.router-link-exact-active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  overflow: hidden;
 }
 
 </style>
