@@ -42,7 +42,18 @@ export default {
           center: 'title',
           right: 'dayGridMonth, timeGridDay, listDay'
         },
-        events: []
+        events: [
+          {
+            title: 'Laura',
+            start: '2022-07-05T16:30',
+            end: '2022-07-05T17:30'
+          },
+          {
+            title: 'Nicole',
+            start: '2022-07-05T15:30',
+            end: '2022-07-05T16:30'
+          }
+        ]
       },
       currentEvents: [],
       guests: []
@@ -107,8 +118,8 @@ h2.bookedHeader {
   color: #e77a8c;
   font-size: 30px;
 }
-c
-.booked {
+
+c.booked {
 margin-bottom: 50px;
 }
 
