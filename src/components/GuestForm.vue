@@ -36,7 +36,7 @@
         </div>
         <p></p>
       </div>
-      <button class="btn btn-primary me-3" type="submit" @click.prevent="guestFormEntry" style="font-size: 13px">Anfrage abschicken</button>
+      <button class="btn btn-primary me-3" type="submit" @click.prevent="guestFormEntry" style="font-size: 12px;margin-left: 12px">Anfrage abschicken</button>
     </div>
   </form>
 </template>

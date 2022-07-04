@@ -1,10 +1,17 @@
 <template>
-  <div class='demo-app'>
-    <div class='demo-app-main'>
-      <FullCalendar class='demo-app-calendar' :options='calendarOptions'></FullCalendar>
+  <div class="container">
+    <div class='demo-app'>
+      <div class='demo-app-main'>
+        <FullCalendar class='demo-app-calendar' :options='calendarOptions'></FullCalendar>
+      </div>
+    </div>
+    <h2 class="bookedHeader">Zuletzt gebucht:</h2>
+    <div class="booked" v-for="guest in guests" :key="guest.id">
+      <p>{{ guest.firstName }} hat eine Behandlung für den {{guest.date }} gebucht.</p>
     </div>
   </div>
 </template>
+
 <script>
 import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue3'
@@ -37,8 +44,22 @@ export default {
         },
         events: []
       },
-      currentEvents: []
+      currentEvents: [],
+      guests: []
     }
+  },
+  mounted () {
+    const endUrl = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/guests'
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    }
+    fetch(endUrl, requestOptions)
+      .then(response => response.json())
+      .then(result => result.forEach(guest => {
+        this.guests.push(guest)
+      }))
+      .catch(error => console.log('error', error))
   }
 }
 </script>
@@ -79,6 +100,16 @@ b { /* used for event dates/times */
 .fc { /* the calendar root */
   max-width: 1000px;
   margin: 0 auto;
+}
+
+h2.bookedHeader {
+  padding-bottom: 36px;
+  color: #e77a8c;
+  font-size: 30px;
+}
+c
+.booked {
+margin-bottom: 50px;
 }
 
 </style>

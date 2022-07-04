@@ -31,11 +31,11 @@
           </div>
         </div>
     </div>
-    <h2>Zuletzt gebucht:</h2>
-    <p/>
-    <div class="col" v-for="guest in guests" :key="guest.id">
-    <p>{{ guest.firstName }} hat eine Behandlung für den {{guest.date }} gebucht.</p>
-    </div>
+<!--    <h2>Zuletzt gebucht:</h2>-->
+<!--    <p/>-->
+<!--    <div class="col" v-for="guest in guests" :key="guest.id">-->
+<!--    <p>{{ guest.firstName }} hat eine Behandlung für den {{guest.date }} gebucht.</p>-->
+<!--    </div>-->
   </div>
 </template>
 
@@ -58,24 +58,24 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     GuestForm
   },
-  data () {
-    return {
-      guests: []
-    }
-  },
-  mounted () {
-    const endUrl = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/guests'
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    }
-    fetch(endUrl, requestOptions)
-      .then(response => response.json())
-      .then(result => result.forEach(guest => {
-        this.guests.push(guest)
-      }))
-      .catch(error => console.log('error', error))
-  }
+  // data () {
+  //   return {
+  //     guests: []
+  //   }
+  // },
+  // mounted () {
+  //   const endUrl = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/guests'
+  //   const requestOptions = {
+  //     method: 'GET',
+  //     redirect: 'follow'
+  //   }
+  //   fetch(endUrl, requestOptions)
+  //     .then(response => response.json())
+  //     .then(result => result.forEach(guest => {
+  //       this.guests.push(guest)
+  //     }))
+  //     .catch(error => console.log('error', error))
+  // }
 }
 
 </script>
