@@ -58,7 +58,7 @@ div.header {
 }
 
 .globalHeader{
-  font-family: "Avenir Next", sans-serif;
+  font-family: "Avenir Next";
   padding: 60px;
   text-align: center;
   color: black;
@@ -68,7 +68,7 @@ div.header {
 .globalFooter {
   background-color: black;
   color: white;
-  font-family: "Avenir Next", sans-serif;
+  font-family: "Avenir Next";
   margin-top: 30px;
   padding: 20px;
 }
@@ -123,7 +123,7 @@ div.header {
 /*Header PASSION*/
 span.stretch {
   display:inline-block;
-  font-family: "Times New Roman OS Regular", sans-serif;
+  font-family: "Times New Roman OS Regular";
   -webkit-transform:scale(2.5,1.5); /* Safari and Chrome */
   -moz-transform:scale(2.5,1.5); /* Firefox */
   -ms-transform:scale(2.5,1.5); /* IE 9 */
