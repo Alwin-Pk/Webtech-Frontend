@@ -27,24 +27,21 @@
 
 <script>
 import Navbar from './components/Navbar.vue'
-import card from '@/components/card'
-import carousel from '@/components/carousel'
+import Card from '@/components/Card'
+import Carousel from '@/components/Carousel'
 import Prices from '@/views/Prices'
-import footer from '@/components/footer'
 
 export default {
   name: 'App',
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    carousel,
+    Carousel,
     // eslint-disable-next-line vue/no-unused-components
     Navbar,
     // eslint-disable-next-line vue/no-unused-components
-    card,
+    Card,
     // eslint-disable-next-line vue/no-unused-components
-    Prices,
-    // eslint-disable-next-line vue/no-unused-components
-    footer
+    Prices
   }
 }
 </script>

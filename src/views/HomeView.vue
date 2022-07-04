@@ -42,8 +42,8 @@
 <script>
 
 import Navbar from '@/components/Navbar.vue'
-import card from '@/components/card.vue'
-import carousel from '@/components/carousel.vue'
+import Card from '@/components/Card.vue'
+import carousel from '@/components/Carousel.vue'
 import GuestForm from '@/components/GuestForm.vue'
 
 export default {
@@ -54,10 +54,10 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     Navbar,
     // eslint-disable-next-line vue/no-unused-components
-    card,
+    Card,
     // eslint-disable-next-line vue/no-unused-components
     GuestForm
-  },
+  }
   // data () {
   //   return {
   //     guests: []

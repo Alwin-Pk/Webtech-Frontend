@@ -37,7 +37,7 @@ export default {
 // eslint-disable no-undef
 // eslint-disable-next-line vue/multi-word-component-names
   /* eslint-disable */
-  name: 'card',
+  name: 'Card',
   components: {GuestForm},
   props: ['angebot', 'beschreibung', 'preis', 'imgsource', 'card_id', 'oldPrice']
 }
