@@ -5,10 +5,10 @@
         <FullCalendar class='demo-app-calendar' :options='calendarOptions'></FullCalendar>
       </div>
     </div>
-    <h2 class="bookedHeader">Zuletzt gebucht:</h2>
-    <div class="booked" v-for="guest in guests" :key="guest.id">
-      <p>{{ guest.firstName }} hat eine Behandlung für den {{guest.date }} gebucht.</p>
-    </div>
+<!--    <h2 class="bookedHeader">Zuletzt gebucht:</h2>-->
+<!--    <div class="booked" v-for="guest in guests" :key="guest.id">-->
+<!--      <p>{{ guest.firstName }} hat eine Behandlung für den {{guest.date }} gebucht.</p>-->
+<!--    </div>-->
   </div>
 </template>
 
@@ -42,18 +42,7 @@ export default {
           center: 'title',
           right: 'dayGridMonth, timeGridDay, listDay'
         },
-        events: [
-          {
-            title: 'Laura',
-            start: '2022-07-05T16:30',
-            end: '2022-07-05T17:30'
-          },
-          {
-            title: 'Nicole',
-            start: '2022-07-05T15:30',
-            end: '2022-07-05T16:30'
-          }
-        ]
+        events: []
       },
       currentEvents: [],
       guests: []
@@ -68,6 +57,12 @@ export default {
     fetch(endUrl, requestOptions)
       .then(response => response.json())
       .then(result => result.forEach(guest => {
+        const event = {
+          title: guest.firstName,
+          start: guest.date,
+          end: guest.date
+        }
+        this.calendarOptions.events.push(event)
         this.guests.push(guest)
       }))
       .catch(error => console.log('error', error))
